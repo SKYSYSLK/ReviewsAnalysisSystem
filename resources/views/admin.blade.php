@@ -33,21 +33,48 @@
                         </div>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="36" class="img-circle"><span >Hizrian</span></span> </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li>
-                                <div class="user-box">
-                                    <div class="u-img"><img src="assets/img/profile.jpg" alt="user"></div>
-                                    <div class="u-text">
-                                        <h4>Hizrian</h4>
-                                </div>
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a>
-                        </ul>
-                        <!-- /.dropdown-user -->
-                    </li>
+                        @endif
+                    @else
+
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="20" class="img-circle"><span >Hizrian</span></a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li>
+                                        <div class="user-box">
+                                            <div class="u-img"><img src="assets/img/profile.jpg" alt="user"></div>
+                                            <div class="u-text">
+                                                <h4>Hizrian</h4>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <i class="fa fa-power-off"></i> Logout
+                                    </a>
+                                </ul>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                    @endguest
+
+
                 </ul>
             </div>
         </nav>
