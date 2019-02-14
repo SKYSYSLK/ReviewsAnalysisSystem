@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\review;
+use Google\Cloud\Core\ServiceBuilder;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,27 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('admin');
+    }
+
+    public function postReview(Request $request){
+        $rev = new review();
+        $rev->user_id = \Auth::user()->id;
+        $rev->review = $request->review;
+        $rev->score = $this->analyze($request->review);
+        $rev->save();
+        dd($rev->score);
+    }
+
+    public function analyze($review){
+        $cloud = new ServiceBuilder([
+            'keyFilePath' => base_path('storage/app/public/gc.json'),
+            'projectId' => 'sentimental-231106'
+        ]);
+
+        $language = $cloud->language();
+        $annotation = $language->analyzeSentiment($review);
+        $sentiment = $annotation->sentiment();
+        return $sentiment['score'];    
     }
 }
