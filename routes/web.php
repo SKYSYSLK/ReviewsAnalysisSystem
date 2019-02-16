@@ -12,11 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('admin');
+    return redirect('/home');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin/dashboard', 'adminController@index');
+// Route::get('/admin/dashboard', 'adminController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home/review', 'HomeController@postReview');

@@ -50,16 +50,8 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="20" class="img-circle"><span >Hizrian</span></a>
+                                <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="/assets/img/profile.jpg" alt="user-img" width="20" class="img-circle"><span >Hizrian</span></a>
                                 <ul class="dropdown-menu dropdown-user">
-                                    <li>
-                                        <div class="user-box">
-                                            <div class="u-img"><img src="/assets/img/profile.jpg" alt="user"></div>
-                                            <div class="u-text">
-                                                <h4>Hizrian</h4>
-                                            </div>
-                                        </div>
-                                    </li>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -224,6 +216,9 @@
                         <div class="col-md-2 mt-3 p-3 pl-3">
                             Suitable image here
                         </div>
+                        @if (Auth::user()->role_id!=0)
+                        <form method="post" action="/home/review">
+                            @csrf
                         <div class="col-md-6">
                             <br>
                             <div class="card">
@@ -231,27 +226,31 @@
                                     <div class="">
                                         {{--testing summary option--}}
                                         <label for="comment">Review</label>
-                                        <textarea class="form-control" id="review" rows="5"></textarea>
+                                        <textarea class="form-control" id="review" name="review" rows="5"></textarea>
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                   <button class="btn btn-info">Submit</button>
+                                   <button type="submit" class="btn btn-info">Submit</button>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="col-md-4">
-                            <br>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="">
-                                        <label for="Summary">Summary</label>
-                                        <textarea class="form-control" id="review" rows="5" disabled></textarea>
+                        </form>
+                        @endif
+                        @if (Auth::user()->role_id!=1)
+                            <div class="col-md-4">
+                                <br>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="">
+                                            <label for="Summary">Summary</label>
+                                            <textarea class="form-control" id="review" rows="5" disabled></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        </div>
+                            </div>
+                        @endif
                     </div>
                 </div>
 
