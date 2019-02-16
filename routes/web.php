@@ -19,9 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Route::get('/admin/dashboard', 'adminController@index');
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home/review', 'HomeController@postReview');
