@@ -12,7 +12,8 @@
         "fideloper/proxy": "^4.0",
         "google/cloud-language": "^0.16.4",
         "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "php-science/textrank": "^1.1"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
