@@ -11,13 +11,20 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return redirect('/home');
 });
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home/review', 'HomeController@postReview');
+
+Route::get('/rooms', 'RoomsController@index');
+
+Route::get('/services', 'ServicesController@index');
+
+Route::get('/foods', 'FoodsController@index');
+
+Route::get('/facilities', 'FacilitiesController@index');

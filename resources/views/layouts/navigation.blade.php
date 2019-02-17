@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
 
     <a class="navbar-brand font-weight-bold" href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
 
@@ -21,19 +21,19 @@
                 @endif
             @else
                 <li class="nav-item active">
-                    <a class="nav-link text-info font-weight-bold" href="{{ url('/') }}">Home</a>
+                    <a class="nav-link text-info font-weight-bold" href="{{ url('/home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-info font-weight-bold" href="{{ url('/') }}">Rooms & Beds</a>
+                    <a class="nav-link text-info font-weight-bold" href="{{ url('/rooms') }}">Rooms & Beds</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-info font-weight-bold" href="{{ url('/') }}">Services</a>
+                    <a class="nav-link text-info font-weight-bold" href="{{ url('/services') }}">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-info font-weight-bold" href="{{ url('/') }}">Foods & Beverages</a>
+                    <a class="nav-link text-info font-weight-bold" href="{{ url('/foods') }}">Foods & Beverages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-info font-weight-bold" href="{{ url('/') }}">Facilities</a>
+                    <a class="nav-link text-info font-weight-bold" href="{{ url('/facilities') }}">Facilities</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-warning font-weight-bold" href="#"
