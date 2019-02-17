@@ -99,3 +99,20 @@
 .from-show-notify label{
 	padding-top: 0.65rem;
 }
+
+body{
+    min-height: 90vh;
+}
+
+.wrapper {
+    min-height: 70vh;
+    height: 90vh;
+}
+
+main {
+    min-height: 90%;
+}
+
+#remember {
+    left: 0px;
+}
