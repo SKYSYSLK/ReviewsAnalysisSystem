@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card h-100">
     <div class="card-header">
         <h4 class="card-title">Overall Statistics</h4>
         <p class="card-category">
