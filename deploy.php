@@ -7,7 +7,7 @@ require 'recipe/laravel.php';
 set('application', 'ReviewsAnalysisSystem');
 
 // Project repository
-set('repository', 'git@github.com:SKYSYS-2018/ReviewsAnalysisSystem.git');
+set('repository', 'https://github.com/SKYSYS-2018/ReviewsAnalysisSystem.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true); 
