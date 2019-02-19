@@ -72,6 +72,7 @@ class HomeController extends Controller
         $rev->score = $sentiment['score'];
         $rev->level = $level;
         $rev->save();
+        return redirect('/home');
     }
 
     public function analyze($review){
