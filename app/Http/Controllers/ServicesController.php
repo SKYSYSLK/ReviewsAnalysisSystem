@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\review;
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
@@ -23,6 +24,16 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        return view('services');
+        //Fetching Category Data
+        $rooms = Review::where('category_id',1)->count();
+        $services = Review::where('category_id',2)->count();
+        $foods = Review::where('category_id',3)->count();
+        $facilities = Review::where('category_id',4)->count();
+        $categoryData = [$rooms,$services,$foods,$facilities];
+
+        //Fetching Reviews Data
+        $reviews = Review::with('user')->where('category_id',3)->get();
+
+        return view('services', compact('categoryData','reviews'));
     }
 }

@@ -7,6 +7,8 @@ use App\User;
 use App\Review;
 use Google\Cloud\Core\ServiceBuilder;
 use App\Charts\reviewsAnalytic;
+use PhpScience\TextRank\Tool\StopWords\English;
+use PhpScience\TextRank\TextRankFacade;
 
 class HomeController extends Controller
 {
@@ -84,5 +86,21 @@ class HomeController extends Controller
         $annotation = $language->analyzeSentiment($review);
         $sentiment = $annotation->sentiment();
         return $sentiment;    
+    }
+
+    public function summarizeText($text){
+
+        // initialize the summarizing API
+        $api = new TextRankFacade();
+
+        // English implementation for stopwords/junk words:
+        $stopWords = new English();
+        $api->setStopWords($stopWords);
+
+        // Array of the most important sentences from the text:
+        $result = $api->summarizeTextBasic($text);
+
+        // return the summarized text
+        return $result;
     }
 }

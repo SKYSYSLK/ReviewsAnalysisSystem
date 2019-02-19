@@ -25,7 +25,16 @@ class RoomsController extends Controller
      */
     public function index()
     {
-        $reviews = review::where('category', 1)->get()  ;
-        return view('rooms', ['reviews' => $reviews]);
+        //Fetching Category Data
+        $rooms = Review::where('category_id',1)->count();
+        $services = Review::where('category_id',2)->count();
+        $foods = Review::where('category_id',3)->count();
+        $facilities = Review::where('category_id',4)->count();
+        $categoryData = [$rooms,$services,$foods,$facilities];
+
+        //Fetching Reviews Data
+        $reviews = Review::with('user')->where('category_id',1)->get();
+
+        return view('rooms', compact('categoryData','reviews'));
     }
 }
