@@ -33,6 +33,7 @@ class HomeController extends Controller
         $rev = new review();
         $rev->user_id = \Auth::user()->id;
         $rev->review = $request->review;
+        $rev->category = $request->category;
         $rev->score = $this->analyze($request->review);
         $rev->save();
         dd($rev->score);

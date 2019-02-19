@@ -5265,7 +5265,7 @@ body {
 
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
   position: absolute;
-  left: -9999px;
+  left: 0px;
 }
 [type="checkbox"]:not(:checked) + .form-check-sign, [type="checkbox"]:checked + .form-check-sign {
   position: relative;
@@ -5350,7 +5350,7 @@ body {
 /*     Radio Input    */
 [type="radio"]:not(:checked), [type="radio"]:checked {
   position: absolute;
-  left: -9999px;
+  left: 0px;
 }
 [type="radio"]:not(:checked) + .form-radio-sign, [type="radio"]:checked + .form-radio-sign {
   position: relative;

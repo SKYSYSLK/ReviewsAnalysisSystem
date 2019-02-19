@@ -113,6 +113,6 @@ main {
     min-height: 90%;
 }
 
-#remember {
+input[type="radio"], input[type="checkbox"] {
     left: 0px;
 }
