@@ -9,8 +9,8 @@
                 </div>
                 <div class="col-7 d-flex align-items-center">
                     <div class="numbers">
-                        <p class="card-category">Visitors</p>
-                        <h4 class="card-title">1,294</h4>
+                        <p class="card-category">Rooms & Beds</p>
+                        <h4 class="card-title">{{$categoryData[0]}}</h4>
                     </div>
                 </div>
             </div>
@@ -26,8 +26,8 @@
                 </div>
                 <div class="col-7 d-flex align-items-center">
                     <div class="numbers">
-                        <p class="card-category">Subscribers</p>
-                        <h4 class="card-title">1303</h4>
+                        <p class="card-category">Services</p>
+                        <h4 class="card-title">{{$categoryData[1]}}</h4>
                     </div>
                 </div>
             </div>
@@ -43,8 +43,8 @@
                 </div>
                 <div class="col-7 d-flex align-items-center">
                     <div class="numbers">
-                        <p class="card-category">Order</p>
-                        <h4 class="card-title">576</h4>
+                        <p class="card-category">Foods & Beverages</p>
+                        <h4 class="card-title">{{$categoryData[2]}}</h4>
                     </div>
                 </div>
             </div>
@@ -60,8 +60,8 @@
                 </div>
                 <div class="col-7 d-flex align-items-center">
                     <div class="numbers">
-                        <p class="card-category">Sales</p>
-                        <h4 class="card-title">$ 1,345</h4>
+                        <p class="card-category">Facilities</p>
+                        <h4 class="card-title">{{$categoryData[3]}}</h4>
                     </div>
                 </div>
             </div>
