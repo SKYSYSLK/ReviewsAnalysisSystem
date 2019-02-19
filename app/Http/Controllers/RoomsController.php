@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\review;
+use App\User;
 use Illuminate\Http\Request;
 
 class RoomsController extends Controller
@@ -23,6 +25,7 @@ class RoomsController extends Controller
      */
     public function index()
     {
-        return view('rooms');
+        $reviews = review::where('category', 1)->get()  ;
+        return view('rooms', ['reviews' => $reviews]);
     }
 }

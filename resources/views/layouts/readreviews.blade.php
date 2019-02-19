@@ -1,17 +1,18 @@
 <div class="card">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-5">
-                <div class="icon-big text-center">
-                    <i class="la la-heart-o text-primary"></i>
-                </div>
-            </div>
-            <div class="col-7 d-flex align-items-center">
-                <div class="numbers">
-                    <p class="card-category">Followers</p>
-                    <h4 class="card-title">+45K</h4>
-                </div>
-            </div>
-        </div>
+    <div class="card-header pb-0">
+        <p class="text-uppercase font-weight-bold font-italic">{{$review}}</p>
     </div>
+    {{--<div class="card-body">--}}
+        {{--<p>{{$review->review}}</p>--}}
+    {{--</div>--}}
+    {{--<div class="card-footer">--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-md-6">--}}
+                {{--{{$review->category}}--}}
+            {{--</div>--}}
+            {{--<div class="col-md-6">--}}
+                {{--{{$review->score}}--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 </div>
