@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddCategoriesToReviews extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddCategoriesToReviews extends Migration
      */
     public function up()
     {
-        Schema::table('reviews', function (Blueprint $table) {
-            $table->integer('category_id')->after('user_id');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->increments('id');
+            $table->String('name');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddCategoriesToReviews extends Migration
      */
     public function down()
     {
-        Schema::table('reviews', function (Blueprint $table) {
-            $table->dropColumn('category');
-        });
+        Schema::dropIfExists('categories');
     }
 }
