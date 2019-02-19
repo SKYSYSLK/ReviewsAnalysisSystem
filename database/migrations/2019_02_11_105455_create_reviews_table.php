@@ -17,6 +17,7 @@ class CreateReviewsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->String('review', 2000);
+            $table->String('level',1);
             $table->double('score', 4, 2)->nullable()->default(0);
             $table->timestamps();
         });

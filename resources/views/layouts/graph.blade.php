@@ -7,9 +7,12 @@
     <div class="card-body">
         <div class="mapcontainer">
             <div class="ct-chart">
-                <span>Graph Here</span>
+                {!! $chart->container() !!}
             </div>
         </div>
     </div>
 </div>
 
+@push('scripts')
+    {!! $chart->script() !!}
+@endpush

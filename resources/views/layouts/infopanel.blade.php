@@ -9,8 +9,8 @@
             </div>
             <div class="col-7 d-flex align-items-center">
                 <div class="numbers">
-                    <p class="card-category">Number</p>
-                    <h4 class="card-title">150GB</h4>
+                    <p class="card-category">Customers</p>
+                    <h4 class="card-title">{{$staticData[0]}}</h4>
                 </div>
             </div>
         </div>
@@ -23,8 +23,8 @@
             </div>
             <div class="col-7 d-flex align-items-center">
                 <div class="numbers">
-                    <p class="card-category">Followers</p>
-                    <h4 class="card-title">+45K</h4>
+                    <p class="card-category">Reviews</p>
+                    <h4 class="card-title">{{$staticData[1]}}</h4>
                 </div>
             </div>
         </div>
