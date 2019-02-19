@@ -10,7 +10,9 @@
                         @include('layouts.dashboard')
                     </div>
                     <div class="col-lg-9 col-md-9 col-sm-12">
-                        @include('layouts.readreviews')
+                        @foreach($reviews as $review)
+                            @include('layouts.readreviews')
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -1,9 +1,13 @@
 <div class="col-md-3">
-    <div class="card h-100">
-        <div class="card-body"> Suitable image here</div>
+    <div class="card" style="border-radius: 10px">
+        <img class="img-thumbnail" src="{{ asset('assets/img/reviews.jpg') }}" style="height: 295px;padding-bottom: 50px;padding-top: 50px;margin-bottom: -30px" >
+        {{--<div class="card-body">--}}
+
+        {{--</div>--}}
     </div>
 </div>
 <div class="col-md-9">
+    {{-- view for customers --}}
     @if (Auth::user()->role_id!=0)
         <form method="post" action="/home/review" class="h-100">
             @csrf
@@ -40,12 +44,16 @@
             </div>
         </form>
     @endif
+
+    {{-- view for administration --}}
     @if (Auth::user()->role_id!=1)
         <div class="card h-100">
             <div class="card-body">
                 <div class="">
                     <label for="Summary">Summary</label>
-                    <textarea class="form-control" id="review" rows="5" disabled></textarea>
+                    <textarea class="form-control" id="review" rows="5" disabled>
+                        {{$summary}}
+                    </textarea>
                 </div>
             </div>
         </div>
