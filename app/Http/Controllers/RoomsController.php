@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\review;
-use App\User;
-use Illuminate\Http\Request;
+use App\Review;
 
 class RoomsController extends Controller
 {
