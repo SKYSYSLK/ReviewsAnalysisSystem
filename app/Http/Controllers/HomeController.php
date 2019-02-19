@@ -51,7 +51,16 @@ class HomeController extends Controller
         $chart = new reviewsAnalytic;
         $chart->labels(['Excellent', 'Good', 'Neutral', 'Bad']);
         $chart->dataset('Reviews Analytic', 'pie', [$excellent,$good,$neutral,$bad])->backgroundColor(['green','orange','purple','red']);
-        return view('home', compact('chart','categoryData','staticData'));
+
+        // Summarizing reviews
+        $reviews = Review::select('review')->get();
+        $textForSummarizing = "";
+        foreach ($reviews as $review) {
+            $textForSummarizing = $textForSummarizing.$review->review;
+        }
+        $summary = $this->summarizeText($textForSummarizing);
+
+        return view('home', compact('chart','categoryData','staticData', 'summary'));
     }
 
     public function postReview(Request $request){
@@ -101,6 +110,6 @@ class HomeController extends Controller
         $result = $api->summarizeTextBasic($text);
 
         // return the summarized text
-        return $result;
+        return implode(" ", $result);
     }
 }
