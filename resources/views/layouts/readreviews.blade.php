@@ -13,6 +13,14 @@
             <div class="col-md-6">
                 {{$review->score}}
             </div>
+            <div class="row col-md-4">
+                <i class="fas fa-star" style="color: #ffa500"></i>
+                <i class="far fa-star" style="color: #ffa500"></i>
+                <i class="fas fa-star" style="color: yellow"></i>
+                <i class="fas fa-star" style="color: yellow"></i>
+                <i class="fas fa-star" style="color: yellow"></i>
+            </div>
+
         </div>
     </div>
 </div>
