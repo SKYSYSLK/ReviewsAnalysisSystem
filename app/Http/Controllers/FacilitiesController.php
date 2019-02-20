@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\review;
+use App\Review;
 use Illuminate\Http\Request;
 
 class FacilitiesController extends Controller

@@ -7,6 +7,7 @@
     </div>
 </div>
 <div class="col-md-9">
+    {{-- view for customers --}}
     @if (Auth::user()->role_id!=0)
         <form method="post" action="/home/review" class="h-100">
             @csrf
@@ -43,12 +44,16 @@
             </div>
         </form>
     @endif
+
+    {{-- view for administration --}}
     @if (Auth::user()->role_id!=1)
         <div class="card h-100">
             <div class="card-body">
                 <div class="">
                     <label for="Summary">Summary</label>
-                    <textarea class="form-control" id="review" rows="5" disabled></textarea>
+                    <textarea class="form-control" id="review" rows="5" disabled>
+                        {{$summary}}
+                    </textarea>
                 </div>
             </div>
         </div>

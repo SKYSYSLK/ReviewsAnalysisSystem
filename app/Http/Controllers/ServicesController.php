@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\review;
-use Illuminate\Http\Request;
+use App\Review;
 
 class ServicesController extends Controller
 {
@@ -32,7 +31,7 @@ class ServicesController extends Controller
         $categoryData = [$rooms,$services,$foods,$facilities];
 
         //Fetching Reviews Data
-        $reviews = Review::with('user')->where('category_id',3)->get();
+        $reviews = Review::with('user')->where('category_id',2)->get();
 
         return view('services', compact('categoryData','reviews'));
     }
