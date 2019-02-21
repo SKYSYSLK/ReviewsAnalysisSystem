@@ -7,18 +7,26 @@
     </div>
     <div class="card-footer">
         <div class="row">
+            {{--<div class="col-md-6">--}}
+                {{--{{$count=round($review->score*100/20)}}--}}
+            {{--</div>--}}
+            <div class="row col-md-4">
+               <?php $count=round($review->score*100/20)?>
+                @if($count<=0)
+                    @for($i=0;$i<5;$i++)
+                        <i class="far fa-star" style="color: #ffa500"></i>
+                    @endfor
+                @else
+                    @for($i=0;$i<$count;$i++)
+                        <i class="fas fa-star" style="color: #ffa500"></i>
+                    @endfor
+                    @for($i=0;$i<(5-$count);$i++)
+                        <i class="far fa-star" style="color: #ffa500"></i>
+                    @endfor
+                @endif
+            </div>
             <div class="col-md-6">
                 {{$review->category_id}}
-            </div>
-            <div class="col-md-6">
-                {{$review->score}}
-            </div>
-            <div class="row col-md-4">
-                <i class="fas fa-star" style="color: #ffa500"></i>
-                <i class="far fa-star" style="color: #ffa500"></i>
-                <i class="fas fa-star" style="color: yellow"></i>
-                <i class="fas fa-star" style="color: yellow"></i>
-                <i class="fas fa-star" style="color: yellow"></i>
             </div>
 
         </div>
