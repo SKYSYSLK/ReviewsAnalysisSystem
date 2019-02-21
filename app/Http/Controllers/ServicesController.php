@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Review;
+use App\Category;
 
 class ServicesController extends Controller
 {
@@ -30,9 +31,12 @@ class ServicesController extends Controller
         $facilities = Review::where('category_id',4)->count();
         $categoryData = [$rooms,$services,$foods,$facilities];
 
+        //  Fetching category object
+        $category =Category::find(2);
+
         //Fetching Reviews Data
         $reviews = Review::with('user')->where('category_id',2)->get();
 
-        return view('services', compact('categoryData','reviews'));
+        return view('services', compact('categoryData','reviews','category'));
     }
 }

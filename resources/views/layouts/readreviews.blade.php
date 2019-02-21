@@ -26,7 +26,7 @@
                 @endif
             </div>
             <div class="col-md-6">
-                {{$review->category_id}}
+                {{$category->name}}
             </div>
 
         </div>
