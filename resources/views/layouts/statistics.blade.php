@@ -80,7 +80,7 @@
     </div>
 </div>
 <div class="col-md-6 mb-4">
-    <div class="card" style="padding: 5px">
+    <div class="card bg-warning" style="padding: 5px">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">

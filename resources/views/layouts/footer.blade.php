@@ -1,5 +1,5 @@
 {{--footer section--}}
-<footer class="footer">
+<footer class="footer bg-dark">
     <div class="container-fluid">
         <nav class="pull-left">
             <ul class="nav">

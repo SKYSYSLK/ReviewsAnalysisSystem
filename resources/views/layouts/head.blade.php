@@ -22,4 +22,19 @@
     <link href="{{ asset('assets/css/ready.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/demo.css') }}" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+    <style>
+        .parallax {
+            /* The image used */
+            background-image: url({{ asset('assets/img/background1.jpg') }});
+
+            /* Set a specific height */
+            height: 500px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>

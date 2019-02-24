@@ -1,7 +1,7 @@
-<div class="card h-100">
-    <div class="card-header">
-        <h4 class="card-title">Overall Statistics</h4>
-        <p class="card-category">
+<div class="card h-100" style="background-color: rgba(255, 191, 0,0.8)">
+    <div class="card-header bg-warning">
+        <h4 class="card-title text-light">Overall Statistics</h4>
+        <p class="card-category text-dark">
             Statistic Graph</p>
     </div>
     <div class="card-body">

@@ -1,4 +1,4 @@
-<div class="card p-2">
+<div class="card p-2 " style="background-color: rgba(255, 191, 0,0.3)">
     <div class="card card-stats card-warning mb-2">
         <div class="card-body">
             <div class="row">
