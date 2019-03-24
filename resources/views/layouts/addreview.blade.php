@@ -1,6 +1,6 @@
 <div class="col-md-3">
     <div class="card" style="border-radius: 10px">
-        {{--<img class="img-thumbnail" src="{{ asset('assets/img/reviews.jpg') }}" style="height: 295px;padding-bottom: 50px;padding-top: 50px;margin-bottom: -30px" >--}}
+        <img class="img-thumbnail" src="{{ asset('assets/img/reviews.png') }}" style="height: 295px;padding-bottom: 50px;padding-top: 50px;margin-bottom: -30px" >
         {{--<div class="card-body">--}}
 
         {{--</div>--}}

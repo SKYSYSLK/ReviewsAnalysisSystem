@@ -7,7 +7,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header text-center">{{ __('Register') }}</div>
+                        <div class="card-header text-center"><h2 class="font-weight-bold mb-0">{{ __('Register') }}</h2></div>
 
                         <div class="card-body">
                             <form method="POST" action="{{ route('register') }}">
@@ -15,7 +15,7 @@
 
                                 <div class="form-group row">
                                     <label for="firstName"
-                                           class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
+                                           class="col-md-4 col-form-label text-md-right font-weight-bold">{{ __('First Name') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="firstName" type="text"
@@ -32,7 +32,7 @@
 
                                 <div class="form-group row">
                                     <label for="lastName"
-                                           class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
+                                           class="col-md-4 col-form-label text-md-right font-weight-bold">{{ __('Last Name') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="lastName" type="text"
@@ -49,7 +49,7 @@
 
                                 <div class="form-group row">
                                     <label for="email"
-                                           class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                           class="col-md-4 col-form-label text-md-right font-weight-bold">{{ __('E-Mail Address') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="email" type="email"
@@ -66,7 +66,7 @@
 
                                 <div class="form-group row">
                                     <label for="password"
-                                           class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                           class="col-md-4 col-form-label text-md-right font-weight-bold">{{ __('Password') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="password" type="password"
@@ -83,7 +83,7 @@
 
                                 <div class="form-group row">
                                     <label for="password-confirm"
-                                           class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                           class="col-md-4 col-form-label text-md-right font-weight-bold">{{ __('Confirm Password') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="password-confirm" type="password" class="form-control"
@@ -92,8 +92,8 @@
                                 </div>
 
                                 <div class="form-group row mb-0">
-                                    <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
+                                    <div class="col-md-6 col-sm-12 offset-md-3">
+                                        <button type="submit" class="btn btn-primary btn-block">
                                             {{ __('Register') }}
                                         </button>
                                     </div>

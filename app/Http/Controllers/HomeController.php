@@ -33,7 +33,8 @@ class HomeController extends Controller
         //Fetching Static Data
         $customers = User::where('role_id', 1)->count();
         $reviews = Review::count();
-        $staticData = [$customers, $reviews];
+        $sysTime = date("Y-m-d h:i:s a",time());
+        $staticData = [$customers, $reviews, $sysTime];
 
         //Fetching Category Data
         $rooms = Review::where('category_id', 1)->count();
@@ -112,7 +113,7 @@ class HomeController extends Controller
         $api->setStopWords($stopWords);
 
         // Array of the most important sentences from the text:
-        $result = $api->summarizeTextFreely($text, 5, 1, Summarize::GET_FIRST_IMPORTANT_AND_FOLLOWINGS);
+        $result = $api->summarizeTextFreely($text, 15, 3, Summarize::GET_FIRST_IMPORTANT_AND_FOLLOWINGS);
 
         // return the summarized text
         return implode(" ", $result);

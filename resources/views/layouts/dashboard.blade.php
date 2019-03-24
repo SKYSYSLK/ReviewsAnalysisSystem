@@ -1,10 +1,10 @@
 <div class="card p-2 " style="background-color: rgba(255, 191, 0,0.3)">
-    <div class="card card-stats card-warning mb-2">
+    <div class="card card-stats card-info mb-2">
         <div class="card-body">
             <div class="row">
                 <div class="col-5">
                     <div class="icon-big text-center">
-                        <i class="la la-users"></i>
+                        <i class="la la-hotel"></i>
                     </div>
                 </div>
                 <div class="col-7 d-flex align-items-center">
