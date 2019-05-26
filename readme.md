@@ -6,16 +6,16 @@ This system is implemented to analyse user reviews given by the user to a hotel.
 
 <br>
 
-![Capture01](./readme-assets/Capture01.PNG)
-
+![Capture01](https://firebasestorage.googleapis.com/v0/b/githubcv.appspot.com/o/Capture10.PNG?alt=media&token=547287ca-ec83-4894-9219-0933bc52947d)
+Auth Screen
 <br>
 
-![Capture02](./readme-assets/Capture02.PNG)
-
+![Capture02](https://firebasestorage.googleapis.com/v0/b/githubcv.appspot.com/o/screencapture-gurugedara-ga-home-2019-05-26-20_02_09.png?alt=media&token=e3cc7b0d-2fde-4db9-9cdc-9193ebae0ce9)
+Admin Layout
 <br>
 
-![Capture01](./readme-assets/Capture03.PNG)
-
+![Capture01](https://firebasestorage.googleapis.com/v0/b/githubcv.appspot.com/o/screencapture-gurugedara-ga-home-2019-05-26-20_07_43.png?alt=media&token=8085bd60-2ddb-455c-a045-b7e0706656b5)
+Customer Layout
 <br>
 
 ### Project Scope
